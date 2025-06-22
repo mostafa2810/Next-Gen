@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.nginx
-    container_name: nginx
+    container_name: ${DOCKER_NAME}_webserver
     restart: unless-stopped
     ports:
       - "80:80"
