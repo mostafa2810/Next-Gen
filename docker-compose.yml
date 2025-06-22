@@ -9,7 +9,7 @@ services:
     container_name: ${DOCKER_NAME}_webserver
     restart: unless-stopped
     ports:
-      - "80:80"
+      - "80"
     networks:
       - app-network
 
