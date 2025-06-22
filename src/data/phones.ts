@@ -13,6 +13,7 @@ export const phones: Phone[] = [
     ],
     description: 'أحدث آيفون بتصميم التيتانيوم وشرائح A18 Pro وأكثر أنظمة الكاميرا تطوراً',
     price: 6700,
+    bestseller: true,
     specs: {
       display: '6.7-inch Super Retina XDR',
       processor: 'A18 Pro chip',
@@ -59,6 +60,26 @@ export const phones: Phone[] = [
       camera: '200MP Main + 12MP Ultra Wide + 50MP Telephoto + 10MP Telephoto',
       battery: '5300mAh with 50W charging',
       storage: ['512GB', '1TB', '2TB']
+    }
+  },
+  {
+    id: 'phone-4',
+    name: 'Titan',
+    fullName: 'iPhone 15 Pro Max',
+    colors: [
+      { name: 'White Titanium', value: 'white', hex: '#F8F8FF', imagePath: '/images/iphone15 white.png' },
+      { name: 'Blue Titanium', value: 'blue', hex: '#4A90E2', imagePath: '/images/iphone15 blue.png' },
+      { name: 'Black Titanium', value: 'black', hex: '#36454F', imagePath: '/images/iphone15 black.png' },
+      { name: 'Silver Titanium', value: 'silver', hex: '#C0C0C0', imagePath: '/images/iphone15 silver.png' }
+    ],
+    description: 'آيفون 15 برو ماكس بتصميم التيتانيوم وكاميرا محسنة وأداء استثنائي',
+    price: 5500,
+    specs: {
+      display: '6.7-inch Super Retina XDR',
+      processor: 'A17 Pro chip',
+      camera: '48MP Main + 12MP Ultra Wide + 12MP Telephoto',
+      battery: 'Up to 29 hours video playback',
+      storage: ['512GB', '1TB']
     }
   }
 ];

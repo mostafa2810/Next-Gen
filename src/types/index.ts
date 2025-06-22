@@ -11,6 +11,7 @@ export interface Phone {
   description: string;
   price: number;
   specs: PhoneSpecs;
+  bestseller?: boolean;
 }
 
 export interface PhoneColor {

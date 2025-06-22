@@ -41,6 +41,27 @@ export default function ProductImage({ phone, currentColor }: ProductImageProps)
             alt={`${phone.fullName} in ${selectedColor?.name}`} 
             className="max-h-full max-w-full object-contain"
           />
+          
+          {/* Bestseller Ribbon Badge */}
+          {phone.bestseller && (
+            <motion.div
+              className="absolute top-[15%] right-[10%] z-20"
+              initial={{ scale: 0.8, x: 50, opacity: 0 }}
+              animate={{ scale: 1, x: 0, opacity: 1 }}
+              transition={{ delay: 0.3, type: "spring", stiffness: 200, damping: 15 }}
+            >
+              <div
+                className="bg-gradient-to-r from-red-600 to-rose-500 text-white font-bold text-xs py-2 pl-4 pr-5 rounded-l-md shadow-lg"
+                style={{
+                  clipPath: 'polygon(0% 0%, 100% 0%, 88% 50%, 100% 100%, 0% 100%)',
+                }}
+              >
+                <div className="flex items-center justify-center transition-transform duration-300 hover:scale-105">
+                  <span className="drop-shadow-sm">الأكثر مبيعاً</span>
+                </div>
+              </div>
+            </motion.div>
+          )}
         </motion.div>
       </AnimatePresence>
     </div>
