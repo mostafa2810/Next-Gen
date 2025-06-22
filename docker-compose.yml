@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  # Nginx service with built React app
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile.nginx
+    container_name: nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    external: true
+    name: npm_app_network 
